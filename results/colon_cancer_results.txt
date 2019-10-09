@@ -1,0 +1,52 @@
+
+Alon, U. and Barkai, N. and Notterman, D.A. and Gish, K. and Ybarra, S. and Mack, D. and Levine,A.J. (1999). Broad patterns of gene expression revealed by clustering analysis of tumor and normalcolon tissues probed by oligonucleotide arrays, Proc. Natl. Acad. Sci. USA,96(12), 6745–6750.
+
+https://cran.r-project.org/web/packages/plsgenomics/plsgenomics.pdf
+
+plsgenomics
+
+myColonCancerDataset8.csv
+
+ = = = = WRONG = = = = 
+
+tumor = 1 -> 1
+normal = 2 ->  0
+
+SVM linear - 10 rounds
+            MCC F1_score accuracy TP_rate TN_rate PR_AUC ROC_AUC
+mean +0.506   0.642    0.775        0.725   0.817       0.677   0.838
+mean +0.494   0.615    0.783        0.577   0.896       0.717   0.782
+
+k-NN - 10 rounds
+            MCC F1_score accuracy TP_rate TN_rate PR_AUC ROC_AUC
+mean +0.468    0.599    0.758         0.532   0.882        0.624   0.707
+mean +0.461    0.574    0.767         0.474   0.936        0.650   0.705
+
+CART - 10 rounds
+mean +0.358    0.615    0.700          0.590   0.764        0.643   0.677
+
+XgBoost - 10 rounds
+            MCC F1_score accuracy TP_rate TN_rate PR_AUC ROC_AUC
+mean   +0.319    0.435    0.733      0.438       0.860       0.492   0.704
+
+
+
+
+ = = = = CORRECT = = = = 
+
+tumor = 1 -> 0
+normal = 2 ->  1
+
+
+                MCC F1_score accuracy       TP_rate TN_rate PR_AUC ROC_AUC
+GB            +0.545   0.814        0.775        0.846       0.693   0.858         0.821
+CART      +0.526    0.821        0.767        0.883       0.582  0.776          0.732
+kNN         +0.484   0.868        0.808        0.915       0.522  0.827         0.718
+SVM_lin +0.406    0.822        0.758        0.863       0.527   0.917        0.834
+
+
+
+
+
+
+

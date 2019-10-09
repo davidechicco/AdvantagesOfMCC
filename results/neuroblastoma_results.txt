@@ -1,0 +1,11 @@
+
+
+SVM linear - 10 rounds
+
+      MCC F1_score accuracy TP_rate TN_rate PR_AUC ROC_AUC
+mean +0.41     0.85     0.78    0.90    0.47   0.88    0.81
+
+Random forest - 10 rounds
+
+      MCC F1_score accuracy TP_rate TN_rate PR_AUC ROC_AUC
+mean   +0.54     0.87     0.82    0.89    0.64   0.94    0.86
