@@ -94,10 +94,10 @@ for(exe_i in 1:execution_number)
  
  cat("\n\n\n=== final results ===\n")
  
- cat("Number of executions = ", execution_number, "\n", sep="")
- # statistics on the dataframe of confusion matrices
- statDescConfMatr <- stat.desc(confMatDataFrame)
-medianAndMeanRowResults <- (statDescConfMatr)[c("median", "mean"),]
-print(dec_three(medianAndMeanRowResults))
+cat("Number of executions = ", execution_number, "\n", sep="")
+# statistics on the dataframe of confusion matrices
+statDescConfMatr <- stat.desc(confMatDataFrame)
+meanAndStdDevRowResults <- (statDescConfMatr)[c("mean", "std.dev"),]
+print(dec_two(meanAndStdDevRowResults))
 cat("\n\n=== === === ===\n")
 
